@@ -1,6 +1,6 @@
 package api.nick.infra.security;
 
-import api.nick.entity.Login;
+import api.nick.entity.login.Login;
 import api.nick.repository.LoginRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

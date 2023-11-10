@@ -1,6 +1,6 @@
 package api.nick.infra.security;
 
-import api.nick.entity.Login;
+import api.nick.entity.login.Login;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
