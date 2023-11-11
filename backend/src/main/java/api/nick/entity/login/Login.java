@@ -25,7 +25,7 @@ public class Login implements UserDetails {
     private String enrollment;
     @Column(nullable = false)
     private String password;
-    @ManyToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "login_role",
             joinColumns = @JoinColumn(name = "login_id"),
