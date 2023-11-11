@@ -8,7 +8,7 @@ import { AuthenticatedGuard } from './authenticated.guard';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthenticatedGuard] },
+  { path: 'home', component: HomeComponent,/* canActivate: [AuthenticatedGuard]*/ },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { User } from '../entities/user';
 import { StorageService } from './storage.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class UserService {
     }
   };
 
-  constructor(private http: HttpClient, private localStorage: StorageService) { }
+  constructor(private http: HttpClient, private localStorage: StorageService, private router: Router) { }
 
   login(username: any, password: any): Observable<any>{
     this.localStorage.remove('acsess_token');
@@ -48,5 +49,11 @@ export class UserService {
 
   deleteUser(id: any) {
     return this.http.delete<any>(this.API_URL+`/${id}`, this.HTTP_OPTIONS); 
+  }
+
+  logout(): void{
+    this.localStorage.remove('acsess_token');
+    this.localStorage.remove('user_id');
+    this.router.navigate(['/']);
   }
 }

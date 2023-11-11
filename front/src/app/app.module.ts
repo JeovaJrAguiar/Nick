@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { ChatUnitComponent } from './chat-unit/chat-unit.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: {
@@ -58,7 +60,9 @@ const customNotifierOptions: NotifierOptions = {
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    ChatUnitComponent
   ],
   imports: [
     BrowserModule,
