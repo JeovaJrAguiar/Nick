@@ -55,4 +55,7 @@ export class HomeComponent implements OnInit {
       this.notifier.notify('error', ex);
     }
   }
+  clearMessages(): void {
+    this.messageContent = '';
+  }
 }

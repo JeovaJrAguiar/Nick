@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
    *
    * @param {NotifierService} notifier Notifier service
    */
-  constructor(private registerService: UserService, 
+  constructor(private userService: UserService, 
     private formBuilder: FormBuilder,
     private storage: StorageService, notifier: NotifierService,
     private router: Router) { this.notifier = notifier; }
@@ -27,5 +27,7 @@ export class HeaderComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  
+  clearMessages(): void {
+    //this.userService.
+  }
 }
