@@ -1,7 +1,7 @@
 package api.nick.service;
 
-import api.nick.entity.DataSet;
-import api.nick.entity.Intents;
+import api.nick.entity.dataset.DataSet;
+import api.nick.entity.dataset.Intents;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.stereotype.Service;

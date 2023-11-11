@@ -1,5 +1,6 @@
 package api.nick.controller;
 
+import api.nick.entity.dataset.ResponseDTO;
 import api.nick.service.NickBotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,10 +17,10 @@ public class NickController {
 
     @GetMapping("/question")
     @PreAuthorize("hasAnyAuthority('STUDENT', 'ADMIN')")
-    public ResponseEntity<String> getInformation(@RequestParam("question") String question) throws Exception{
+    public ResponseEntity<ResponseDTO> getInformation(@RequestParam("question") String question) throws Exception{
         try {
             String response = NickBotService.classificarPergunta(question);
-            return new ResponseEntity<>(response, HttpStatus.OK);
+            return new ResponseEntity<>(new ResponseDTO(response), HttpStatus.OK);
         }catch (Exception e){
             throw new Exception(e);
         }
