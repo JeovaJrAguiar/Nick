@@ -1,5 +1,7 @@
-package api.nick.entity;
+package api.nick.entity.login;
 
+import api.nick.entity.user.Role;
+import api.nick.entity.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,7 +9,6 @@ import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class Login implements UserDetails {
     private String enrollment;
     @Column(nullable = false)
     private String password;
-    @ManyToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "login_role",
             joinColumns = @JoinColumn(name = "login_id"),

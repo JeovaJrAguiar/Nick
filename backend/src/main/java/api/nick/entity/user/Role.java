@@ -1,4 +1,4 @@
-package api.nick.entity;
+package api.nick.entity.user;
 
 import lombok.Getter;
 import lombok.Setter;
