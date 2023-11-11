@@ -4,32 +4,24 @@
   <div class="overflow-auto card-body" style="height: 40rem; ">
     <div *ngFor="let message of messages; let i = index" class="row" >
       <div class="message text-light text-justify text-nowrap font-weight-light text-monospace" [style.background-color]="i % 2 === 0 ? '#1c1e33' : '#25273e'" style="border: solid 3px #1c1e33;">
-        <div class="p-4 container-xl">
+        <div class="p-4 box-message">
           {{message.value}}
         </div>
       </div>
     </div>
 
-    <div id="div-form"> 
+    <div id="div-form">
       <form [formGroup]="formUser" id="form">
         <div class="form-floating form-outline form-white mb-2">
-
-          <input class="form-control input border-1" id="question" type="text" formControlName="question" placeholder="Pergunta" required>
+          <input class="form-control text-light" id="question" type="text" formControlName="question" placeholder="Pergunte ao Nick" required>
           <div *ngIf="formUser.get('question')?.errors?.['required'] && formUser.get('question')?.touched" style="color: red;">
               Pergunta
           </div>
           <label for="enrollment">Pergunta</label>
           <div class="col-2">
-            <button (click)="send()" class="btn btn-success" type="button">Enviar</button>
-          </div>
-
-
-          <div class="input-group mb-3">
-            <input type="text" class="form-control text-light" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-success" type="button" id="button-addon2">Enviar</button>
+            <button (click)="send()" class="btn btn-success input-transparente" type="button">Enviar</button>
           </div>
         </div>
-        
       </form>
     </div>
   </div>

@@ -12,9 +12,9 @@
           <div class="form-floating form-outline form-white mb-2">
             <input class="text-light border border-danger form-control input border-2" id="enrollment" type="text" formControlName="enrollment" placeholder="E-mail" required>
             <div *ngIf="formUser.get('enrollment')?.errors?.['required'] && formUser.get('enrollment')?.touched" style="color: red;">
-                Matrícula obrigatório
+              <label >Matrícula obrigatório</label>
             </div>
-            <label for="enrollment">Matrícula</label>
+            <label for="enrollment" class="input-transparente">Matrícula</label>
           </div>
           
           <div class="form-floating form-outline form-white mb-2">  

@@ -83,3 +83,8 @@ main {
 .form-floating input {
     background: transparent;
 }
+
+.input-transparente{
+    background-color: transparent;
+    caret-color: black;
+}

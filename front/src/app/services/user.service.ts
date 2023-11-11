@@ -22,10 +22,11 @@ export class UserService {
   login(username: any, password: any): Observable<any>{
     this.localStorage.remove('acsess_token');
     this.localStorage.remove('user_id');
-    const body = new FormData();
-    body.append('enrollment', username);
-    body.append('password', password);
-
+    const body = {
+      enrollemnt: username,
+      password: password
+    }
+    
     return this.http.post<any>(this.API_URL+ "/login", body)
       .pipe(
         tap(res => {

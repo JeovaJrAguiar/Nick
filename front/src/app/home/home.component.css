@@ -83,3 +83,17 @@ main {
 input {
     background: transparent;
 }
+.box-message {
+    text-align: left;
+    margin-left: 20rem;
+}
+
+.message {
+    text-align: center !important;
+    align-items: center;
+}
+
+.input-transparente{
+    background-color: transparent;
+    caret-color: black;
+}

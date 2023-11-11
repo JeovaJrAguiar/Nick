@@ -10,8 +10,8 @@
           <h4 id="h3-form" class="mb-3">Sign Up</h4>
           
 
-          <div class="form-floating form-outline form-white mb-2">
-            <input class="border border-danger form-control input border-2" id="enrollment" type="text" formControlName="enrollment" placeholder="Matrícula" required>
+          <div class="input-transparente form-floating form-outline form-white mb-2">
+            <input class="text-light border border-danger form-control input border-2" id="enrollment" type="text" formControlName="enrollment" placeholder="Matrícula" required>
             <div *ngIf="formUser.get('enrollment')?.errors?.['required'] && formUser.get('enrollment')?.touched" style="color: red;">
                 Matrícula obrigatório
             </div>
@@ -19,7 +19,7 @@
           </div>
           
           <div class="form-floating form-outline form-white mb-2">
-            <input class="border border-danger form-control input border-2" id="name" type="text" formControlName="name" placeholder="Nome" required>
+            <input class="text-light border border-danger form-control input border-2" id="name" type="text" formControlName="name" placeholder="Nome" required>
             <div *ngIf="formUser.get('name')?.errors?.['required'] && formUser.get('name')?.touched" style="color: red;">
               Nome obrigatório
             </div>
@@ -27,7 +27,7 @@
           </div>
 
           <div class="form-floating form-outline form-white mb-2">  
-            <input class="border border-danger form-control input border-2" id="password" type="password" formControlName="password" placeholder="Senha" required>
+            <input class="text-light border border-danger form-control input border-2" id="password" type="password" formControlName="password" placeholder="Senha" required>
             <div *ngIf="formUser.get('password')?.errors?.['required'] && formUser.get('password')?.touched" style="color: red;">
               Senha obrigatória
             </div>
