@@ -1,8 +1,0 @@
-:root {
-    --cor-primaria: #1c1e33;
-    --cor-secundaria: #25273e;
-    --cor-tercearia:  #ee3a57;
-}
-body {
-    background-color: var(--cor-secundaria) !important;
-}
