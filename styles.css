@@ -18,7 +18,7 @@ body {
 }
 
 .chat-header {
-    background-color: #4CAF50;
+    background-color: #0f62fe;
     color: white;
     padding: 10px;
     text-align: center;
@@ -44,7 +44,7 @@ body {
 
 button {
     padding: 8px;
-    background-color: #4CAF50;
+    background-color: #0f62fe;
     color: white;
     border: none;
     cursor: pointer;
